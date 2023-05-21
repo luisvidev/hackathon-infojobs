@@ -6,13 +6,34 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      xxs: '0px',
+      xs: '480px',
+      sm: '600px',
+      md: '840px',
+      lg: '960px',
+      xl: '1280px',
+      xxl: '1440px',
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      borderWidth: {
+        1: '1px',
+      },
+      borderColor: {
+        primary: '#167DB7',
+        'primary-dark': '#23536E',
+      },
+      colors: {
+        primary: '#167DB7',
+        'primary-l2': '#8BBEDB',
+        'primary-l3': '#C5DFED',
+        'primary-dark': '#23536E',
+        'primary-panel': 'rgba(22,125,183,0.7)',
+        accent: '#FF6340',
+        'accent-dark': '#C0543C',
+        'gray-l2': '#CCCCCC',
       },
     },
   },
   plugins: [],
-}
+};
