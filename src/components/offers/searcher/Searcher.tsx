@@ -4,8 +4,15 @@ import * as styles from './styles';
 import { searcherButton as searcherButtonStyle } from '@components/ui/button/styles';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useOfferStore } from '@store/offer-store/useOfferStore';
-import { setOffersRequest } from '@store/offer-store/selectors';
-import { getOffers } from '@services/website/getOffers';
+import {
+  getIsLoading,
+  setOffersRequest,
+  setIsLoading,
+  setSearch,
+} from '@store/offer-store/selectors';
+import { getOffersRequest } from '@services/website/getOffers';
+import { OFFER_SECTION } from '../../../constants';
+import { Spinner } from '@components/ui/spinner/Spinner';
 
 interface InputType {
   searcher: string;
@@ -13,16 +20,27 @@ interface InputType {
 
 export const Searcher = () => {
   const setOfferData = useOfferStore(setOffersRequest);
+  const setIsRequestLoading = useOfferStore(setIsLoading);
+  const setSearchByKeyWord = useOfferStore(setSearch);
+  const isLoading = useOfferStore(getIsLoading);
   const { register, handleSubmit } = useForm<InputType>();
 
   const onSubmit: SubmitHandler<InputType> = async ({ searcher }) => {
-    const data = await getOffers({ keyWord: searcher, page: 1 });
+    setSearchByKeyWord(searcher);
+    setIsRequestLoading(true);
+    const data = await getOffersRequest({ keyWord: searcher, page: 1 });
+
+    document
+      .getElementById(OFFER_SECTION)
+      ?.scrollIntoView({ behavior: 'smooth' });
 
     setOfferData({
       page: data.currentPage,
       totalResults: data.totalResults,
       offers: data.offers.map((item) => ({ ...item })),
+      totalPages: data.totalPages,
     });
+    setIsRequestLoading(false);
   };
 
   return (
@@ -40,11 +58,12 @@ export const Searcher = () => {
       </div>
       <Button
         type="submit"
+        disabled={isLoading}
         className={`${searcherButtonStyle as string} ${
           styles.searcherSubContainer2
         }`}
       >
-        Buscar
+        {isLoading ? <Spinner /> : 'Buscar'}
       </Button>
     </form>
   );

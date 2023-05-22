@@ -3,21 +3,15 @@ import { OfferList } from '@components/offers/list/OfferList';
 import { Searcher } from '@components/offers/searcher/Searcher';
 import { Navbar } from '@components/ui/header/Navbar/Navbar';
 import { MainLayout } from '@components/ui/layouts/MainLayout/MainLayout';
-import { useOfferStore } from '@store/offer-store/useOfferStore';
-import { getOffers } from '@store/offer-store/selectors';
+
 import * as styles from './styles';
 
 export const HomeTemplate = () => {
-  const offers = useOfferStore(getOffers);
-
-  const withoutOffers = !!offers && offers.length === 0;
-  const withOffers = !!offers && offers.length > 0;
-
   return (
     <>
       <div
         style={{
-          backgroundImage: "url('/assets/banner3.jpg')",
+          backgroundImage: "url('/assets/banner-lg.jpg')",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: '50% 35%',
@@ -34,8 +28,9 @@ export const HomeTemplate = () => {
       </div>
       <MainLayout activeNavbar={false}>
         <section className={styles.section}>
-          {withoutOffers && <p>No se encontraron ofertas para esa busqueda</p>}
-          {withOffers && <OfferList />}
+          <OfferList />
+          {/* {withoutOffers && <p>No se encontraron ofertas para esa busqueda</p>}
+          {withOffers && } */}
         </section>
         <section className={styles.section}>Novedades ...</section>
       </MainLayout>

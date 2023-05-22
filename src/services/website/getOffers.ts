@@ -6,7 +6,7 @@ interface Props {
   page?: number;
 }
 
-export const getOffers = async (props: Props) => {
+export const getOffersRequest = async (props: Props) => {
   const { keyWord, page = ITEMS_PER_PAGE } = props;
 
   const urlParams = new URLSearchParams({

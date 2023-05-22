@@ -28,23 +28,39 @@ export const getOffers = async (
   });
 
   const response = (await res.json()) as GetOffersResponse;
-  const { items, currentPage, pageSize, totalResults } = response;
+  const { items, currentPage, pageSize, totalResults, totalPages } = response;
+
   const offers = items.map((item) => {
-    const { id, title, author, province, teleworking, published } = item;
+    const {
+      id,
+      title,
+      author,
+      province,
+      teleworking,
+      published,
+      salaryDescription,
+      contractType,
+      workDay,
+    } = item;
     return {
       id,
       title,
       author: author.name,
       authorLogoUrl: author.logoUrl,
+      authorUri: author.uri,
       province: province.value,
       teleworking: teleworking?.value,
       published,
+      salaryDescription,
+      contractType: contractType.value,
+      workDay: workDay.value,
       // experienceMin: experienceMin.value,
       // link,
     };
   });
 
   return {
+    totalPages,
     currentPage,
     pageSize,
     totalResults,
