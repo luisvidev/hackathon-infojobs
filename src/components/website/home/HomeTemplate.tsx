@@ -18,7 +18,7 @@ export const HomeTemplate = () => {
           padding: '10px',
         }}
       >
-        <MainLayout activeNavbar={false}>
+        <MainLayout activeNavbar={false} activeFooter={false}>
           <Navbar />
           <section className="py-8 px-6">
             <h1 className={styles.title}>Siempre a mejor!</h1>
@@ -29,8 +29,6 @@ export const HomeTemplate = () => {
       <MainLayout activeNavbar={false}>
         <section className={styles.section}>
           <OfferList />
-          {/* {withoutOffers && <p>No se encontraron ofertas para esa busqueda</p>}
-          {withOffers && } */}
         </section>
         <section className={styles.section}>Novedades ...</section>
       </MainLayout>
