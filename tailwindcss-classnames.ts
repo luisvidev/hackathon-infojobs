@@ -289,6 +289,7 @@ export type TBackgroundColor =
   | 'bg-primary-l3'
   | 'bg-primary-l4'
   | 'bg-primary-dark'
+  | 'bg-primary-d4'
   | 'bg-primary-panel'
   | 'bg-accent'
   | 'bg-accent-dark'
@@ -297,6 +298,7 @@ export type TBackgroundColor =
   | 'bg-gray-d1'
   | 'bg-gray-d2'
   | 'bg-gray-d4'
+  | 'bg-error'
 
 export type TBackgroundPosition =
   | 'bg-bottom'
@@ -1016,6 +1018,9 @@ export type TGradientColorStops =
   | 'from-primary-dark'
   | 'via-primary-dark'
   | 'to-primary-dark'
+  | 'from-primary-d4'
+  | 'via-primary-d4'
+  | 'to-primary-d4'
   | 'from-primary-panel'
   | 'via-primary-panel'
   | 'to-primary-panel'
@@ -1040,6 +1045,9 @@ export type TGradientColorStops =
   | 'from-gray-d4'
   | 'via-gray-d4'
   | 'to-gray-d4'
+  | 'from-error'
+  | 'via-error'
+  | 'to-error'
 
 export type TBackgrounds =
   | TBackgroundAttachment
@@ -2667,6 +2675,11 @@ export type TBorderColor =
   | 'border-r-primary-l4'
   | 'border-b-primary-l4'
   | 'border-l-primary-l4'
+  | 'border-primary-d4'
+  | 'border-t-primary-d4'
+  | 'border-r-primary-d4'
+  | 'border-b-primary-d4'
+  | 'border-l-primary-d4'
   | 'border-primary-panel'
   | 'border-t-primary-panel'
   | 'border-r-primary-panel'
@@ -2707,6 +2720,11 @@ export type TBorderColor =
   | 'border-r-gray-d4'
   | 'border-b-gray-d4'
   | 'border-l-gray-d4'
+  | 'border-error'
+  | 'border-t-error'
+  | 'border-r-error'
+  | 'border-b-error'
+  | 'border-l-error'
 
 export type TBorderOpacity =
   | 'border-opacity-0'
@@ -3345,6 +3363,7 @@ export type TRingColor =
   | 'ring-primary-l3'
   | 'ring-primary-l4'
   | 'ring-primary-dark'
+  | 'ring-primary-d4'
   | 'ring-primary-panel'
   | 'ring-accent'
   | 'ring-accent-dark'
@@ -3353,6 +3372,7 @@ export type TRingColor =
   | 'ring-gray-d1'
   | 'ring-gray-d2'
   | 'ring-gray-d4'
+  | 'ring-error'
 
 export type TRingWidth =
   | 'ring-0'
@@ -3612,6 +3632,7 @@ export type TRingOffsetColor =
   | 'ring-offset-primary-l3'
   | 'ring-offset-primary-l4'
   | 'ring-offset-primary-dark'
+  | 'ring-offset-primary-d4'
   | 'ring-offset-primary-panel'
   | 'ring-offset-accent'
   | 'ring-offset-accent-dark'
@@ -3620,6 +3641,7 @@ export type TRingOffsetColor =
   | 'ring-offset-gray-d1'
   | 'ring-offset-gray-d2'
   | 'ring-offset-gray-d4'
+  | 'ring-offset-error'
 
 export type TRingOffsetWidth =
   | 'ring-offset-0'
@@ -3873,6 +3895,7 @@ export type TOutlineColor =
   | 'outline-primary-l3'
   | 'outline-primary-l4'
   | 'outline-primary-dark'
+  | 'outline-primary-d4'
   | 'outline-primary-panel'
   | 'outline-accent'
   | 'outline-accent-dark'
@@ -3881,6 +3904,7 @@ export type TOutlineColor =
   | 'outline-gray-d1'
   | 'outline-gray-d2'
   | 'outline-gray-d4'
+  | 'outline-error'
 
 export type TBorders =
   | TBorderStyle
@@ -4191,6 +4215,7 @@ export type TBoxShadowColor =
   | 'shadow-primary-l3'
   | 'shadow-primary-l4'
   | 'shadow-primary-dark'
+  | 'shadow-primary-d4'
   | 'shadow-primary-panel'
   | 'shadow-accent'
   | 'shadow-accent-dark'
@@ -4199,6 +4224,7 @@ export type TBoxShadowColor =
   | 'shadow-gray-d1'
   | 'shadow-gray-d2'
   | 'shadow-gray-d4'
+  | 'shadow-error'
 
 export type TOpacity =
   | 'opacity-0'
@@ -5791,6 +5817,7 @@ export type TCaretColor =
   | 'caret-primary-l3'
   | 'caret-primary-l4'
   | 'caret-primary-dark'
+  | 'caret-primary-d4'
   | 'caret-primary-panel'
   | 'caret-accent'
   | 'caret-accent-dark'
@@ -5799,6 +5826,7 @@ export type TCaretColor =
   | 'caret-gray-d1'
   | 'caret-gray-d2'
   | 'caret-gray-d4'
+  | 'caret-error'
 
 export type TWillChange =
   | 'will-change-auto'
@@ -6038,6 +6066,7 @@ export type TAccentColor =
   | 'accent-primary-l3'
   | 'accent-primary-l4'
   | 'accent-primary-dark'
+  | 'accent-primary-d4'
   | 'accent-primary-panel'
   | 'accent-accent'
   | 'accent-accent-dark'
@@ -6046,6 +6075,7 @@ export type TAccentColor =
   | 'accent-gray-d1'
   | 'accent-gray-d2'
   | 'accent-gray-d4'
+  | 'accent-error'
 
 export type TScrollPadding =
   | 'scroll-p-0'
@@ -7300,6 +7330,7 @@ export type TFill =
   | 'fill-primary-l3'
   | 'fill-primary-l4'
   | 'fill-primary-dark'
+  | 'fill-primary-d4'
   | 'fill-primary-panel'
   | 'fill-accent'
   | 'fill-accent-dark'
@@ -7308,6 +7339,7 @@ export type TFill =
   | 'fill-gray-d1'
   | 'fill-gray-d2'
   | 'fill-gray-d4'
+  | 'fill-error'
 
 export type TStroke =
   | 'stroke-inherit'
@@ -7342,6 +7374,7 @@ export type TStroke =
   | 'stroke-primary-l3'
   | 'stroke-primary-l4'
   | 'stroke-primary-dark'
+  | 'stroke-primary-d4'
   | 'stroke-primary-panel'
   | 'stroke-accent'
   | 'stroke-accent-dark'
@@ -7350,6 +7383,7 @@ export type TStroke =
   | 'stroke-gray-d1'
   | 'stroke-gray-d2'
   | 'stroke-gray-d4'
+  | 'stroke-error'
 
 export type TStrokeWidth =
   | 'stroke-0'
@@ -7891,6 +7925,7 @@ export type TPlaceholderColor =
   | 'placeholder-primary-l3'
   | 'placeholder-primary-l4'
   | 'placeholder-primary-dark'
+  | 'placeholder-primary-d4'
   | 'placeholder-primary-panel'
   | 'placeholder-accent'
   | 'placeholder-accent-dark'
@@ -7899,6 +7934,7 @@ export type TPlaceholderColor =
   | 'placeholder-gray-d1'
   | 'placeholder-gray-d2'
   | 'placeholder-gray-d4'
+  | 'placeholder-error'
 
 export type TPlaceholderOpacity =
   | 'placeholder-opacity-0'
@@ -8148,6 +8184,7 @@ export type TTextColor =
   | 'text-primary-l3'
   | 'text-primary-l4'
   | 'text-primary-dark'
+  | 'text-primary-d4'
   | 'text-primary-panel'
   | 'text-accent'
   | 'text-accent-dark'
@@ -8156,6 +8193,7 @@ export type TTextColor =
   | 'text-gray-d1'
   | 'text-gray-d2'
   | 'text-gray-d4'
+  | 'text-error'
 
 export type TTextOpacity =
   | 'text-opacity-0'
@@ -8445,6 +8483,7 @@ export type TTextDecorationColor =
   | 'decoration-primary-l3'
   | 'decoration-primary-l4'
   | 'decoration-primary-dark'
+  | 'decoration-primary-d4'
   | 'decoration-primary-panel'
   | 'decoration-accent'
   | 'decoration-accent-dark'
@@ -8453,6 +8492,7 @@ export type TTextDecorationColor =
   | 'decoration-gray-d1'
   | 'decoration-gray-d2'
   | 'decoration-gray-d4'
+  | 'decoration-error'
 
 export type TTextDecorationThickness =
   | 'decoration-0'

@@ -4,7 +4,13 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}', // Tremor module
   ],
+  variants: {
+    extend: {
+      translate: ['motion-reduce'],
+    },
+  },
   theme: {
     screens: {
       xxs: '0px',
@@ -29,6 +35,7 @@ module.exports = {
         'primary-l3': '#C5DFED',
         'primary-l4': '#E8F2F8',
         'primary-dark': '#23536E',
+        'primary-d4': '#274454',
         'primary-panel': 'rgba(22,125,183,0.7)',
         accent: '#FF6340',
         'accent-dark': '#C0543C',
@@ -37,6 +44,7 @@ module.exports = {
         'gray-d1': '#89898A',
         'gray-d2': '#797A7A',
         'gray-d4': '#484B4D',
+        error: '#E93E40',
       },
     },
   },
