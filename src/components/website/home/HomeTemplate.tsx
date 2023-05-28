@@ -1,6 +1,6 @@
 'use client';
 import { OfferList } from '@components/offers/OfferList/OfferList';
-import { Searcher } from '@components/offers/Searcher/Searcher';
+import { Searcher } from '@components/offers/searcher/Searcher';
 import { Navbar } from '@components/ui/header/Navbar/Navbar';
 import { MainLayout } from '@components/ui/layouts/MainLayout/MainLayout';
 
