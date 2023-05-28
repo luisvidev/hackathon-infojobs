@@ -1,13 +1,16 @@
 import { Offer } from 'types';
 import * as styles from './styles';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   offer: Offer;
 }
 
 export const OfferItem: React.FC<Props> = ({ offer }) => {
+  const router = useRouter();
   const {
+    id,
     title,
     province,
     published,
@@ -19,8 +22,16 @@ export const OfferItem: React.FC<Props> = ({ offer }) => {
     workDay,
     contractType,
   } = offer;
+
+  const handleOnClick = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    if (event.target?.closest('a')) return;
+    router.push(`/offer/${id}`);
+  };
+
   return (
-    <div className={styles.offerItem}>
+    <div className={styles.offerItem} onClick={handleOnClick}>
       <div className={styles.offerItemLogoContainer}>
         <img
           src={authorLogoUrl}
@@ -53,14 +64,14 @@ export const OfferItem: React.FC<Props> = ({ offer }) => {
         </ul>
         <ul className={styles.offerItemDataList}>
           <li className="md:whitespace-nowrap text-slate-500 border-r after:mr-2 mxr-2">
-            {contractType}
+            Contrato {contractType}
           </li>
           <li className="md:whitespace-nowrap text-slate-500 border-r after:mr-2 mx-2">
             Jornada {workDay}
           </li>
           <li className="md:whitespace-nowrap text-slate-500 ">
             {' '}
-            Contrato {salaryDescription}
+            {salaryDescription}
           </li>
         </ul>
       </div>

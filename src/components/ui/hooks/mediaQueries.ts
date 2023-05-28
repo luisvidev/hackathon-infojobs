@@ -9,4 +9,6 @@ export const mediaQueries = {
 
   smallScreen: '(max-width: 959px)',
   wideScreen: '(min-width: 960px)',
+
+  belowMd: '(max-width: 840px)',
 };

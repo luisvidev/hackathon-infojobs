@@ -14,6 +14,7 @@ import classnames, {
   boxShadowColor,
   textTransform,
 } from '@root/tailwindcss-classnames';
+import { pointerEvents } from 'tailwindcss-classnames';
 
 export const accessButton = classnames(
   width('w-full'),
@@ -21,6 +22,31 @@ export const accessButton = classnames(
   borderRadius('rounded'),
   transitionProperty('transition-all'),
   transitionDelay('delay-100')
+);
+
+export const primaryButtonStyle = classnames(
+  borderRadius('rounded'),
+  textColor('text-white'),
+  backgroundColor('bg-primary', 'hover:bg-primary-dark', 'disabled:bg-gray-d1'),
+  padding('p-2'),
+  height('h-10'),
+  pointerEvents('disabled:pointer-events-none')
+);
+
+export const primaryButtonInvertedStyle = classnames(
+  borderRadius('rounded'),
+  backgroundColor('bg-white'),
+  padding('p-2'),
+  textColor('text-primary', 'hover:text-white', 'disabled:text-white'),
+  backgroundColor('hover:bg-primary-dark', 'disabled:bg-gray-d1'),
+  borderColor(
+    'border-primary',
+    'hover:border-primary-dark',
+    'disabled:border-gray-d1'
+  ),
+  borderWidth('border-1'),
+  height('h-10'),
+  pointerEvents('disabled:pointer-events-none')
 );
 
 export const candidateButton = classnames(
