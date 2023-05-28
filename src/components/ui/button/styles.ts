@@ -18,7 +18,7 @@ import { pointerEvents } from 'tailwindcss-classnames';
 
 export const accessButton = classnames(
   width('w-full'),
-  height('h-[40px]'),
+  height('h-10'),
   borderRadius('rounded'),
   transitionProperty('transition-all'),
   transitionDelay('delay-100')

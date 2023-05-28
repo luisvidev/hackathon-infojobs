@@ -26,8 +26,8 @@ export const OfferItem: React.FC<Props> = ({ offer }) => {
   const handleOnClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    if (event.target?.closest('a')) return;
-    router.push(`/offer/${id}`);
+    if ((event.target as any)?.closest('a')) return;
+    router.push(`/offers/${id}`);
   };
 
   return (

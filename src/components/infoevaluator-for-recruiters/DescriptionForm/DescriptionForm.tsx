@@ -107,7 +107,8 @@ export const DescriptionForm = () => {
     data,
     event
   ) => {
-    const buttonName = event?.nativeEvent.submitter?.name as InputFiles;
+    const buttonName = (event?.nativeEvent as any)?.submitter
+      ?.name as InputFiles;
     if (!buttonName) return;
 
     setButtonSubmitted(buttonName);

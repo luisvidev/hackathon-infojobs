@@ -16,7 +16,7 @@ export const NoveltiesList = () => {
       <hr className="pb-6 w-full" />
       <div className="flex">
         <Link
-          href="/infohints-for-recruiters"
+          href="/infoevaluator-for-recruiters"
           className="max-w-sm bg-white hover:bg-primary-l4 shadow-2xl rounded-md cursor-pointer"
         >
           <Image

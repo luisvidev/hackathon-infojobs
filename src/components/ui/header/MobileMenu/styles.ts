@@ -19,7 +19,7 @@ import classnames, {
 
 export const mobileMenuContainer = classnames(
   position('absolute'),
-  backgroundColor('bg-gray-900/[.6]'),
+  // backgroundColor('bg-gray-900/[.6]' ),
   backdropBlur('backdrop-blur-sm'),
   zIndex('z-10'),
   inset('top-0'),
@@ -32,7 +32,7 @@ export const subMobileMenuContainer = classnames(
   position('absolute'),
   backgroundColor('bg-white'),
   height('h-screen'),
-  width('w-[260px]'),
+  width('w-64'),
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('justify-between')
@@ -54,7 +54,7 @@ export const buttonContainer = classnames(
 
 export const button = classnames(
   width('w-full'),
-  height('h-[40px]'),
+  height('h-10'),
   borderRadius('rounded'),
   transitionProperty('transition-all'),
   transitionDelay('delay-100')

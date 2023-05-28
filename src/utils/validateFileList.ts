@@ -20,7 +20,8 @@ export const validateFileList = async (files: FileList | undefined) => {
     }
 
     const typedArray = new Uint8Array(await file.arrayBuffer());
-    const pdfDoc = await window.pdfjsLib.getDocument(typedArray).promise;
+    const pdfDoc = await (window as any).pdfjsLib.getDocument(typedArray)
+      .promise;
     const numPages = pdfDoc.numPages as number;
 
     if (numPages > 1)

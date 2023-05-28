@@ -16,7 +16,10 @@ export const MobileMenu: React.FC<Props> = ({ handleHideMenu }) => {
     event.stopPropagation();
   };
   return (
-    <div className={styles.mobileMenuContainer} onClick={handleHideMenu}>
+    <div
+      className={`bg-gray-900/[.6] ${styles.mobileMenuContainer}`}
+      onClick={handleHideMenu}
+    >
       <div className={styles.subMobileMenuContainer} onClick={handleClick}>
         <ul className={styles.linksList}>
           <li className={styles.links}>
