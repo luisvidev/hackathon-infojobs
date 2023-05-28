@@ -21,7 +21,7 @@ export const headerContainer = classnames(
 
 export const flexContainer = classnames(display('flex'));
 
-export const navSmallScreen = classnames(display('flex'), height('h-[50px]'));
+export const navSmallScreen = classnames(display('flex'), height('h-12'));
 
 export const navWideScreen = classnames(
   display('flex'),
@@ -38,8 +38,8 @@ export const logoContainer = classnames(
 );
 
 export const hambuguerMenu = classnames(
-  width('w-[50px]'),
-  height('h-[50px]'),
+  width('w-12'),
+  height('h-12'),
   display('flex'),
   justifyContent('justify-center'),
   alignItems('items-center')
@@ -53,7 +53,7 @@ export const itemList = classnames(
 
 export const button = classnames(
   width('w-full'),
-  height('h-[40px]'),
+  height('h-10'),
   borderRadius('rounded'),
   transitionProperty('transition-all'),
   transitionDelay('delay-100')

@@ -32,7 +32,7 @@ export const searcherSubContainer2 = classnames(flexBasis('sm:basis-1/4'));
 
 export const searchOffersLabel = classnames(
   textColor('text-white'),
-  margin('mb-[5px]')
+  margin('mb-1')
 );
 
 export const searchOffersInput = classnames(

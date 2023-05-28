@@ -21,3 +21,58 @@ export interface GetOffersApiResponse {
   totalResults: number;
   offers: Offer[];
 }
+
+export interface GetOfferByIdApiResponse {
+  headerImageUrl: string;
+  description: string;
+}
+
+export interface GetInfoEvaluatorRequest {
+  description: string;
+  cv: string;
+}
+
+export interface GetInfoEvaluatorResponse {
+  percentage: number;
+  explanation: string;
+}
+
+export interface EvaluationForRecruiter {
+  fileName: string;
+  percentage: number;
+  review: string;
+}
+
+export interface InfoEvaluatorForRecruitersForm {
+  description: string;
+  fileInput1?: FileList;
+  fileInput2?: FileList;
+  fileInput3?: FileList;
+  fileInput4?: FileList;
+  fileInput5?: FileList;
+  fileInput6?: FileList;
+  offerId?: string;
+  textContentError?: string;
+  checkboxAddingDescription: boolean;
+  checkboxGettingDescription: boolean;
+}
+
+export type InputFiles = keyof Pick<
+  InfoEvaluatorForRecruitersForm,
+  'fileInput1' | 'fileInput2' | 'fileInput3' | 'fileInput4'
+>;
+
+interface SuccessEvaluationState {
+  fileName: string;
+  inputFile: InputFiles;
+  state: 'success';
+}
+
+interface FailedEvaluationState {
+  fileName: string;
+  inputFile: InputFiles;
+  state: 'error';
+  error: string;
+}
+
+export type EvaluationState = SuccessEvaluationState | FailedEvaluationState;

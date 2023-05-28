@@ -10,7 +10,7 @@ import {
   setIsLoading,
   setSearch,
 } from '@store/offer-store/selectors';
-import { getOffersRequest } from '@services/website/getOffers';
+import { getOffersRequest } from '@services/website/getOffersRequest';
 import { OFFER_SECTION } from '../../../constants';
 import { Spinner } from '@components/ui/spinner/Spinner';
 

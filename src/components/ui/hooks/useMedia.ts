@@ -13,7 +13,7 @@ const useMedia = (query: MediaQuery): boolean | undefined => {
   useEffect(() => {
     let mounted = true;
     const mediaQueryWindow = window.matchMedia(queryToMatch);
-    console.log({ mediaQueryWindow });
+
     const onChange = (): void => {
       if (!mounted) {
         return;

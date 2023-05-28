@@ -14,7 +14,7 @@ import {
 } from '@store/offer-store/selectors';
 import { Spinner } from '@components/ui/spinner/Spinner';
 import ReactPaginate from 'react-paginate';
-import { getOffersRequest } from '@services/website/getOffers';
+import { getOffersRequest } from '@services/website/getOffersRequest';
 import useMedia from '@components/ui/hooks/useMedia';
 
 export const OfferList = () => {

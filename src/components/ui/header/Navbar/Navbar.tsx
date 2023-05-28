@@ -65,7 +65,10 @@ export const Navbar = () => {
               <ActiveLink href="/" text="Buscar empleo" />
             </li>
             <li className={styles.itemList}>
-              <ActiveLink href="/search-company" text="Buscar empresas" />
+              <ActiveLink
+                href="/infoevaluator-for-recruiters"
+                text="InfoEvaluator"
+              />
             </li>
             <li className={styles.itemList}>
               <ActiveLink href="/salaries" text="Salarios" />
