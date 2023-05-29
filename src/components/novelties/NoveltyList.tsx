@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-export const NoveltiesList = () => {
+
+export const NoveltyList = () => {
   return (
     <div className="flex flex-col">
       <div className="flex gap-x-2 items-center">
