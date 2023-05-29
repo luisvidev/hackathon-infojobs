@@ -18,7 +18,7 @@ import classnames, {
 } from '@root/tailwindcss-classnames';
 
 export const mobileMenuContainer = classnames(
-  position('absolute'),
+  position('fixed'),
   // backgroundColor('bg-gray-900/[.6]' ),
   backdropBlur('backdrop-blur-sm'),
   zIndex('z-10'),
