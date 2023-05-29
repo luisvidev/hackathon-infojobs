@@ -7,7 +7,7 @@ import { MainLayout } from '@components/ui/layouts/MainLayout/MainLayout';
 import * as styles from './styles';
 import { useOfferStore } from '@store/offer-store/useOfferStore';
 import { getOffers } from '@store/offer-store/selectors';
-import { NoveltiesList } from '@components/novelties/NoveltiesList/NoveltiesList';
+import { NoveltyList } from '@components/novelties/NoveltyList';
 
 export const HomeTemplate = () => {
   const offers = useOfferStore(getOffers);
@@ -37,7 +37,7 @@ export const HomeTemplate = () => {
           </section>
         )}
         <section className={styles.section}>
-          <NoveltiesList />
+          <NoveltyList />
         </section>
       </MainLayout>
     </>
