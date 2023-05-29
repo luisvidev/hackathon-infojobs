@@ -91,3 +91,11 @@ export interface ChatBoxMessage {
   sender: 'user' | 'bot';
   timestamp: number;
 }
+
+export interface GetInfoHackQuestionsRequest {
+  description: string;
+}
+
+export interface GetInfoHackQuestionsResponse {
+  questions: string[];
+}
