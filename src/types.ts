@@ -99,3 +99,12 @@ export interface GetInfoHackQuestionsRequest {
 export interface GetInfoHackQuestionsResponse {
   questions: string[];
 }
+
+export interface GetInfoHackRecommendationsRequest {
+  description: string;
+  cv: string;
+}
+
+export interface GetInfoHackRecommendationsResponse {
+  recommendations: string[];
+}
