@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { NoveltyCard } from './NoveltyCard';
 
 export const NoveltyList = () => {
   return (
@@ -15,28 +15,19 @@ export const NoveltyList = () => {
         <h1 className="font-semibold text-3xl">Novedades</h1>
       </div>
       <hr className="pb-6 w-full" />
-      <div className="flex">
-        <Link
+      <div className="flex justify-center flex-wrap gap-10">
+        <NoveltyCard
+          title="InfoEvaluator para reclutadores!"
+          content="¡Aumentamos la productividad y asertividad de los reclutadores a la hora de seleccionar candidatos!"
           href="/infoevaluator-for-recruiters"
-          className="max-w-sm bg-white hover:bg-primary-l4 shadow-2xl rounded-md cursor-pointer"
-        >
-          <Image
-            className="w-full"
-            src="assets/content-card-buscar.svg"
-            width={10}
-            height={50}
-            alt="InfoEvaluator para reclutadores"
-          />
-          <div className="p-4">
-            <h2 className="text-xl font-semibold leading-none mb-4 text-primary">
-              InfoEvaluator para reclutadores!
-            </h2>
-            <p className="text-base">
-              ¡Aumentamos la productividad y asertividad de los reclutadores a
-              la hora de seleccionar candidatos!
-            </p>
-          </div>
-        </Link>
+          imagePath="assets/img-match.svg"
+        />
+        <NoveltyCard
+          title="InfoChat"
+          content="Encuentra todo en un solo lugar: nuestro chat centraliza tips, preguntas, estadísticas y más. La información que deseas, a solo un clic de distancia. ¡Descubre un mundo de conocimiento en nuestro chat!"
+          href="/infochat"
+          imagePath="assets/img-speaking.svg"
+        />
       </div>
     </div>
   );
