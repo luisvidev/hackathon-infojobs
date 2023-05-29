@@ -76,3 +76,7 @@ interface FailedEvaluationState {
 }
 
 export type EvaluationState = SuccessEvaluationState | FailedEvaluationState;
+
+export interface GetInfoChatRequest {
+  message: string;
+}
