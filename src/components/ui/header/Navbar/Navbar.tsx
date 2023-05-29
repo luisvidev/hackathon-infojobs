@@ -71,7 +71,7 @@ export const Navbar = () => {
               />
             </li>
             <li className={styles.itemList}>
-              <ActiveLink href="/salaries" text="Salarios" />
+              <ActiveLink href="/infochat" text="InfoChat" />
             </li>
             <li className={styles.itemList}>
               <ActiveLink href="/education" text="Formación" />

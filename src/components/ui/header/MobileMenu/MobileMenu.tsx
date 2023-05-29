@@ -23,13 +23,13 @@ export const MobileMenu: React.FC<Props> = ({ handleHideMenu }) => {
       <div className={styles.subMobileMenuContainer} onClick={handleClick}>
         <ul className={styles.linksList}>
           <li className={styles.links}>
-            <Link href="/search-work">Buscar empleo</Link>
+            <Link href="/">Buscar empleo</Link>
           </li>
           <li className={styles.links}>
-            <Link href="/search-work">Buscar empresas</Link>
+            <Link href="/infoevaluator-for-recruiters">InfoEvaluator</Link>
           </li>
           <li className={styles.links}>
-            <Link href="/search-work">Salarios</Link>
+            <Link href="/infochat">InfoChat</Link>
           </li>
           <li className={styles.links}>
             <Link href="/search-work">Formación</Link>
