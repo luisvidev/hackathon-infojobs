@@ -80,3 +80,14 @@ export type EvaluationState = SuccessEvaluationState | FailedEvaluationState;
 export interface GetInfoChatRequest {
   message: string;
 }
+
+export interface GetInfoChatResponse {
+  response: string;
+}
+
+export interface ChatBoxMessage {
+  id: number;
+  content: string;
+  sender: 'user' | 'bot';
+  timestamp: number;
+}
