@@ -65,28 +65,41 @@ export const Navbar = () => {
               <ActiveLink href="/" text="Buscar empleo" />
             </li>
             <li className={styles.itemList}>
+              <ActiveLink href="/infochat" text="InfoChat" />
+            </li>
+            <li className={styles.itemList}>
               <ActiveLink
                 href="/infoevaluator-for-recruiters"
                 text="InfoEvaluator"
               />
             </li>
             <li className={styles.itemList}>
-              <ActiveLink href="/infochat" text="InfoChat" />
-            </li>
-            <li className={styles.itemList}>
-              <ActiveLink href="/education" text="Formación" />
+              <ActiveLink href="/infohacks-for-candidates" text="InfoHacks" />
             </li>
           </ul>
           <ul className={styles.flexContainer}>
             <li className={styles.itemList}>
-              <Button type="button" className={companyButtonStyle}>
-                Acceso empresas
-              </Button>
+              <Link
+                href="https://www.infojobs.net/empresas"
+                target="_blank"
+                rel="noreferrer"
+                className="mr-2"
+              >
+                <Button type="button" className={companyButtonStyle}>
+                  Acceso empresas
+                </Button>
+              </Link>
             </li>
             <li className={styles.itemList}>
-              <Button type="button" className={candidateButtonStyle}>
-                Acceso candidatos
-              </Button>
+              <Link
+                href="https://www.infojobs.net/candidate/candidate-login/candidate-login.xhtml"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button type="button" className={candidateButtonStyle}>
+                  Acceso candidatos
+                </Button>
+              </Link>
             </li>
           </ul>
         </nav>

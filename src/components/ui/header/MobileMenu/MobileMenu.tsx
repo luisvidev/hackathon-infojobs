@@ -26,25 +26,37 @@ export const MobileMenu: React.FC<Props> = ({ handleHideMenu }) => {
             <Link href="/">Buscar empleo</Link>
           </li>
           <li className={styles.links}>
-            <Link href="/infoevaluator-for-recruiters">InfoEvaluator</Link>
-          </li>
-          <li className={styles.links}>
             <Link href="/infochat">InfoChat</Link>
           </li>
           <li className={styles.links}>
-            <Link href="/search-work">Formación</Link>
+            <Link href="/infoevaluator-for-recruiters">InfoEvaluator</Link>
+          </li>
+          <li className={styles.links}>
+            <Link href="/infohacks-for-candidates">InfoHacks</Link>
           </li>
         </ul>
         <ul className={styles.buttonContainer}>
           <li>
-            <Button type="button" className={candidateButtonStyle}>
-              Acceso candidatos
-            </Button>
+            <Link
+              href="https://www.infojobs.net/candidate/candidate-login/candidate-login.xhtml"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button type="button" className={companyButtonStyle}>
+                Acceso candidatos
+              </Button>
+            </Link>
           </li>
           <li>
-            <Button type="button" className={companyButtonStyle}>
-              Acceso empresas
-            </Button>
+            <Link
+              href="https://www.infojobs.net/empresas"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button type="button" className={companyButtonStyle}>
+                Acceso empresas
+              </Button>
+            </Link>
           </li>
         </ul>
       </div>
