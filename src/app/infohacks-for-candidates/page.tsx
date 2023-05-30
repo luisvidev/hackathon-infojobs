@@ -1,4 +1,9 @@
 import { SecondaryLayout } from '@components/ui/layouts/SecondaryLayout/SecondaryLayout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'InfoHacks para candidatos',
+};
 
 export default function InfoHacks() {
   return (

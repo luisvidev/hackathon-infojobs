@@ -42,7 +42,7 @@ export const MobileMenu: React.FC<Props> = ({ handleHideMenu }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button type="button" className={companyButtonStyle}>
+              <Button type="button" className={candidateButtonStyle}>
                 Acceso candidatos
               </Button>
             </Link>
