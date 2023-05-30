@@ -38,7 +38,7 @@ Demo:
 Descubre una nueva dimensión en la búsqueda de empleo con esta innovadora funcionalidad. Ahora, los candidatos tienen el poder de potenciar sus oportunidades de ser seleccionados desde el primer paso: su hoja de vida. Infojobs plus no solo te brinda recomendaciones personalizadas para mejorar tu CV, sino que también genera preguntas de entrevista únicas y relevantes basadas en la oferta de trabajo.
 
 Demo:
-![InfoEvaluator sample](doc/infoHacks.gif)
+![InfoEvaluetor sample](doc/infoHacks.gif)
 
 # 💻 Tecnologías
 
