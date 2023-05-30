@@ -160,4 +160,6 @@ export interface GetOfferByIdResponse {
   availableForVisualization: boolean;
   skillsList: SkillsList[];
   salaryDescription: string;
+  teleworking: InfoJobsCategory;
+  languages: Array<{ name: string; level: string }>;
 }

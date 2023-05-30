@@ -44,7 +44,7 @@ export const InputFile: React.FC<Props> = (props) => {
             {isButtonSubmitting ? (
               <Spinner color="primary" />
             ) : (
-              'Procesar informacion'
+              'Procesar información'
             )}
           </button>
         )}

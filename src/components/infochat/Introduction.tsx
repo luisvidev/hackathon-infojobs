@@ -28,7 +28,7 @@ export const Introduction = () => {
           alt="recruiter"
         />
         <p className="text-xl leading-8">
-          Te dejamos algunas buenas preguntas que le podrías hacer: ¿Cúal es la
+          Te dejamos algunas buenas preguntas que le podrías hacer: ¿Cuál es la
           misión y visión de la empresa?, ¿Cuáles son las habilidades más
           demandadas en el mercado laboral actual?, ¿Qué consejos me darías para
           mejorar mi entrevista de trabajo y causar una buena impresión a los
@@ -36,7 +36,7 @@ export const Introduction = () => {
           empleo específicas?, ¿Qué estrategias recomendarías para hacer
           networking y ampliar mi red de contactos profesionales?...
           <br />
-          <strong>¡Suelta tu imaginación y escribenos!</strong>
+          <strong>¡Suelta tu imaginación y escríbenos!</strong>
         </p>
       </div>
     </section>

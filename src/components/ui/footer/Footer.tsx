@@ -17,12 +17,12 @@ export const Footer = () => {
             >
               Infojobs
             </Link>{' '}
-            en compañia de Midudev
+            en compañía de Midudev
           </h2>
         </div>
         <div className="w-full flex flex-col gap-y-5 md:flex-row justify-between">
           <div className={styles.footerFollowContainer}>
-            <h3 className="font-bold text-lg text-gray-d2">!Siguelos!</h3>
+            <h3 className="font-bold text-lg text-gray-d2">¡Síguelos!</h3>
             <Link
               href="https://www.infojobs.net/"
               target="_blank"
@@ -49,7 +49,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div className={styles.footerFollowContainer}>
-            <h3 className="font-bold text-lg text-gray-d2">!Siguemé!</h3>
+            <h3 className="font-bold text-lg text-gray-d2">¡Sígueme!</h3>
             <Link
               href="https://www.linkedin.com/in/luisfernandocrucesvidal/"
               target="_blank"

@@ -2,6 +2,7 @@ import { Offer } from 'types';
 import * as styles from './styles';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { formatTimestamp } from '@utils/formatTimestamp';
 
 interface Props {
   offer: Offer;
@@ -59,7 +60,7 @@ export const OfferItem: React.FC<Props> = ({ offer }) => {
             {teleworking}
           </li>
           <li className="md:whitespace-nowrap text-slate-500 ">
-            {published.toString()}
+            {formatTimestamp(published.toString(), 'short')}
           </li>
         </ul>
         <ul className={styles.offerItemDataList}>

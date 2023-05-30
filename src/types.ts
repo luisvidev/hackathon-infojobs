@@ -23,8 +23,30 @@ export interface GetOffersApiResponse {
 }
 
 export interface GetOfferByIdApiResponse {
-  headerImageUrl: string;
+  id: string;
+  title: string;
+  logoUrl: string;
   description: string;
+  authorName: string;
+  teleworking: string;
+  city: string;
+  province: string;
+  country: string;
+  salaryDescription: string;
+  experienceMin: string;
+  contractType: string;
+  journey: string;
+  creationDate: string;
+  corporateWebsiteUrl: string;
+  studiesMin: string;
+  languages: string[];
+  skillsList: string[];
+  minRequirements?: string;
+  desiredRequirements?: string;
+  typeIndustry?: string;
+  category?: string;
+  contractDuration?: string;
+  infojobsLink?: string;
 }
 
 export interface GetInfoEvaluatorRequest {
@@ -90,4 +112,21 @@ export interface ChatBoxMessage {
   content: string;
   sender: 'user' | 'bot';
   timestamp: number;
+}
+
+export interface GetInfoHackQuestionsRequest {
+  description: string;
+}
+
+export interface GetInfoHackQuestionsResponse {
+  questions: string[];
+}
+
+export interface GetInfoHackRecommendationsRequest {
+  description: string;
+  cv: string;
+}
+
+export interface GetInfoHackRecommendationsResponse {
+  recommendations: string[];
 }

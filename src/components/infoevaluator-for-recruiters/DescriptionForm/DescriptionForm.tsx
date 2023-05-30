@@ -194,7 +194,7 @@ export const DescriptionForm = () => {
       </h1>
       <div id="first-part-description" className="flex flex-col mb-10">
         <h2 className="my-5 text-lg">
-          <strong>1.</strong> Seleccioné de donde desea obtener la descripción
+          <strong>1.</strong> Seleccione de donde desea obtener la descripción
           de la oferta de trabajo:
         </h2>
         <div
@@ -326,7 +326,7 @@ export const DescriptionForm = () => {
       {!isFirstPartConfirmed && (
         <div>
           <h2>
-            Al darle click en <strong>Cargar hojas de vida</strong>, todo el
+            Al darle clic en <strong>Cargar hojas de vida</strong>, todo el
             procesamiento de la información se hará con la descripción de la
             oferta de trabajo anterior. ¡No te preocupes, en cualquier momento
             puedes reiniciar la evaluación!
@@ -348,17 +348,18 @@ export const DescriptionForm = () => {
         <>
           <div id="second-part-file-selection" className="mb-20">
             <h2 className="mb-4 text-lg">
-              <strong>2.</strong> Seleccioné las hojas de vida que quiera
+              <strong>2.</strong> Seleccione las hojas de vida que quiera
               revisar dandole click al botón <strong>Cargar archivo</strong>.
               Esta funcionalidad solo permite cargar hasta un máximo de 4 hojas
               de vida, en formato <strong>PDF(.pdf)</strong> y cuyo{' '}
               <strong>tamaño sea inferior a 1MB</strong>. El PDF solamente puede
-              tene <strong>una(1) hoja</strong>.
+              tener <strong>una(1) hoja</strong>.
             </h2>
             <div className="my-6">
               <p className="text-sm mb-2">
-                Te facilitamos el trabajo! Te dejamos 3 hojas de vida fictias, a
-                manera de ejemplo, para que puedas probrar la funcionalidad.
+                ¡Te facilitamos el trabajo! Te dejamos 4 hojas de vida
+                ficticias, a manera de ejemplo, para que puedas probar la
+                funcionalidad.
               </p>
               <ul className="flex flex-col md:flex-row gap-x-10 gap-y-1">
                 <li>
