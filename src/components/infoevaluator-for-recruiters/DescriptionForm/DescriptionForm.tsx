@@ -194,7 +194,15 @@ export const DescriptionForm = () => {
       </h1>
       <div id="first-part-description" className="flex flex-col mb-10">
         <h2 className="my-5 text-lg">
-          <strong>1.</strong> Seleccione de donde desea obtener la descripción
+          ¿Cómo puedes usar nuestra herramienta? InfoEvaluator te permitirá
+          cargar las hojas de vida de hasta 4 candidatos en formato PDF (.pdf) y
+          máximo una hoja. Con base en la descripción de la oferta de trabajo
+          que tú proveas, nuestro evaluador arrojará un porcentaje de afinidad
+          para cada candidato. ¡Ahorrarás tiempo y recursos que podrás destinar
+          a fases más críticas en el proceso de reclutamiento!
+        </h2>
+        <h2 className="my-5 text-lg">
+          <strong>1.</strong> Seleccione de dónde desea obtener la descripción
           de la oferta de trabajo:
         </h2>
         <div
@@ -219,7 +227,7 @@ export const DescriptionForm = () => {
                   }
                 />
                 <span className="ml-2 text-sm font-medium text-gray-900">
-                  Añadir descripción
+                  Añadir descripción en texto
                 </span>
               </label>
             </div>
@@ -240,7 +248,7 @@ export const DescriptionForm = () => {
                   }
                 />
                 <span className="ml-2 text-sm font-medium text-gray-900">
-                  Obtener descripción de una oferta de Infojobs
+                  Obtener descripción de una oferta de la página de Infojobs
                 </span>
               </label>
             </div>
@@ -251,7 +259,10 @@ export const DescriptionForm = () => {
                 htmlFor="offer-id"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Id de la oferta
+                Id de la oferta{' '}
+                <strong>
+                  (Lo puedes encontrar en la página del detalle de una oferta)
+                </strong>
               </label>
               <div className="flex flex-col md:flex-row gap-5">
                 <div>

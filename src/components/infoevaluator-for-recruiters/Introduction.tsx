@@ -40,8 +40,7 @@ export const Introduction = () => {
           reclutadores no tendrán que analizar cientos de hojas de vida. Podrán
           filtrar las primeras con mayor afinidad, considerando la experiencia
           requerida. Resultado: filtración eficiente en la primera fase, con un
-          <strong> aumento del 80% en productividad</strong>. Con nuestro
-          enfoque innovador, hemos logrado una asertividad del 50% frente a los
+          <strong> aumento del 80% en productividad</strong> frente a los
           métodos tradicionales.{' '}
           <strong>
             ¡Estamos transformando por completo la forma en que se realiza la
