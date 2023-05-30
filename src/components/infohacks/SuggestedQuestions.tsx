@@ -3,7 +3,7 @@ import { Spinner } from '@components/ui/spinner/Spinner';
 import { getSuggestedQuestionsRequest } from '@services/website/getSuggestedQuestionsRequest';
 import { Card } from '@tremor/react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { GetOfferByIdApiResponse } from 'types';
 
 type DataSource = Pick<
@@ -11,9 +11,14 @@ type DataSource = Pick<
   'languages' | 'skillsList' | 'description'
 >;
 
+interface ParentLoadingState {
+  recommendation: boolean;
+  suggestedQuestions: boolean;
+}
+
 interface Props extends DataSource {
-  setFormLoading: (b: boolean) => void;
-  isFormLoading: boolean;
+  setFormLoading: Dispatch<SetStateAction<ParentLoadingState>>;
+  isFormLoading: ParentLoadingState;
 }
 
 export const SuggestedQuestions: React.FC<Props> = ({
@@ -29,7 +34,7 @@ export const SuggestedQuestions: React.FC<Props> = ({
   const handleGenerateQuestionClick = async () => {
     setQuestions([]);
     setServerError(null);
-    setFormLoading(true);
+    setFormLoading((prev) => ({ ...prev, suggestedQuestions: true }));
     try {
       const wholeDescription =
         description +
@@ -46,7 +51,7 @@ export const SuggestedQuestions: React.FC<Props> = ({
     } catch (error) {
       setServerError((error as Error)?.message ?? 'Server error');
     } finally {
-      setFormLoading(false);
+      setFormLoading((prev) => ({ ...prev, suggestedQuestions: false }));
     }
   };
 
@@ -76,11 +81,19 @@ export const SuggestedQuestions: React.FC<Props> = ({
           <div className="flex justify-center md:justify-start py-4" my-2>
             <button
               type="button"
-              disabled={isFormLoading}
+              disabled={
+                isFormLoading.recommendation || isFormLoading.suggestedQuestions
+              }
               className={primaryButtonStyle + ' min-w-[300px]'}
               onClick={handleGenerateQuestionClick}
             >
-              <span>{isFormLoading ? <Spinner /> : 'Generar preguntas'}</span>
+              <span>
+                {isFormLoading.suggestedQuestions ? (
+                  <Spinner />
+                ) : (
+                  'Generar preguntas'
+                )}
+              </span>
             </button>
           </div>
         </div>

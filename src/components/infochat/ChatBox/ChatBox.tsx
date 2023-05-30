@@ -46,7 +46,7 @@ export const ChatBox = () => {
     setIsLoading(true);
     clearErrors();
     const timestamp = new Date().getTime();
-    const message = data.message;
+    const message = data.message.trim();
     const newMessage: ChatBoxMessage = {
       id: timestamp,
       content: data.message,
@@ -72,6 +72,16 @@ export const ChatBox = () => {
       });
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleKeyDown = async (
+    event: React.KeyboardEvent<HTMLTextAreaElement>
+  ) => {
+    if (event.ctrlKey && event.key === 'Enter') {
+      event.preventDefault();
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      handleSubmit(onSubmit)();
     }
   };
 
@@ -131,11 +141,13 @@ export const ChatBox = () => {
             <div className="flex items-center">
               <textarea
                 {...register('message')}
+                onKeyDown={handleKeyDown}
                 disabled={isLoading}
                 className="overflow-hidden w-full px-3 py-2 rounded-md resize-none focus:outline-none focus:ring focus:border-blue-300"
                 placeholder="Escribe tu pregunta..."
               />
               <button
+                type="submit"
                 disabled={isLoading}
                 className="disabled:bg-gray-d1 ml-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
               >
