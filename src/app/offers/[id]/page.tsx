@@ -3,6 +3,11 @@ import { redirect } from 'next/navigation';
 import React from 'react';
 import { GetOfferByIdApiResponse } from '../../../types';
 import { OfferTemplate } from '@components/website/offer/OfferTemplate';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Oferta de trabajo',
+};
 
 export default async function Offer({
   params: { id },

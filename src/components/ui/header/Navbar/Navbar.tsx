@@ -52,12 +52,19 @@ export const Navbar = () => {
         <nav className={styles.navWideScreen}>
           <ul className={styles.flexContainer}>
             <li className={styles.itemList}>
-              <Link href="/" className="mr-8">
+              <Link href="/" className="mr-8 flex">
                 <Image
                   src="/assets/logo.svg"
                   alt="me"
                   width="100"
                   height="25"
+                />
+                <Image
+                  src="/assets/add.png"
+                  alt="plus"
+                  width="25"
+                  height="25"
+                  className="h-5 w-5 ml-2"
                 />
               </Link>
             </li>
