@@ -14,7 +14,7 @@ import classnames, {
   boxShadowColor,
   textTransform,
 } from '@root/tailwindcss-classnames';
-import { pointerEvents } from 'tailwindcss-classnames';
+import { fontSize, fontWeight, pointerEvents } from 'tailwindcss-classnames';
 
 export const accessButton = classnames(
   width('w-full'),
@@ -78,4 +78,18 @@ export const searcherButton = classnames(
   boxShadow('shadow-lg'),
   boxShadowColor('shadow-gray-600'),
   textTransform('uppercase')
+);
+
+export const accentButtonStyle = classnames(
+  borderRadius('rounded'),
+  transitionProperty('transition-all'),
+  transitionDelay('delay-100'),
+  textColor('text-white'),
+  backgroundColor('bg-accent'),
+  backgroundColor('hover:bg-accent-dark'),
+  borderColor('border-accent', 'hover:border-accent-dark'),
+  textTransform('uppercase'),
+  fontSize('text-sm'),
+  fontWeight('font-semibold'),
+  padding('px-4', 'py-2.5')
 );

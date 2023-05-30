@@ -1,8 +1,8 @@
 import { getOfferById } from '@services/infoJobs/getOfferById';
 import { redirect } from 'next/navigation';
 import React from 'react';
-import { GetOfferByIdApiResponse } from '../../../types';
-import { OfferTemplate } from '@components/website/offer/OfferTemplate';
+import { GetOfferByIdApiResponse } from '../../../../types';
+import { ApplicationTemplate } from '@components/website/offerApplication/ApplicationTemplate';
 
 export default async function Offer({
   params: { id },
@@ -15,5 +15,5 @@ export default async function Offer({
   } catch (error) {
     redirect('/');
   }
-  return <OfferTemplate {...offer} />;
+  return <ApplicationTemplate {...offer} />;
 }

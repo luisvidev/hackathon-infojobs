@@ -4,10 +4,7 @@ import {
   Configuration,
   OpenAIApi,
 } from 'openai';
-import {
-  MAXIMUM_OPENAI_TOKENS,
-  TEMPERATURE_DETERMINISTIC,
-} from '../../constants';
+import { MAXIMUM_OPENAI_TOKENS } from '../../constants';
 import { ApiError } from '@services/errors/ApiError';
 import { AxiosError } from 'axios';
 import { ServiceEnum } from '@services/serivices.enum';
@@ -37,7 +34,7 @@ export const getQuestionHacks = async (offerDescription: string) => {
   try {
     const completion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
-      temperature: TEMPERATURE_DETERMINISTIC,
+      temperature: 1,
       messages: [
         ...systemMessage,
         {

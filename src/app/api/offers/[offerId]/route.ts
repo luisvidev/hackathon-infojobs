@@ -1,5 +1,5 @@
 import { ApiError } from '@services/errors/ApiError';
-import { getOfferById } from '@services/infoJobs/infoJobsApi';
+import { getOfferById } from '@services/infoJobs/getOfferById';
 import { NextResponse } from 'next/server';
 
 interface Props {
