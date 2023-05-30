@@ -12,7 +12,7 @@ export const ActiveLink: React.FC<Props> = ({ text, href }) => {
   return (
     <Link
       href={href}
-      className={`${pathname === href ? 'text-primary' : ''} px-2`}
+      className={`${pathname === href ? 'text-primary font-bold' : ''} px-2 `}
     >
       {text}
     </Link>

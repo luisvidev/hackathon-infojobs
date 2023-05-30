@@ -1,6 +1,6 @@
 import { InfoChatTemplate } from '@components/website/infoChat/InfoChatTemplate';
 
-export default function InfoCaht() {
+export default function InfoChat() {
   return (
     <>
       <InfoChatTemplate />
