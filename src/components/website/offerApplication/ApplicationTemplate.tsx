@@ -26,23 +26,20 @@ interface InfoHackForm {
 }
 
 export const ApplicationTemplate: React.FC<Props> = ({
-  id,
-  title,
-  authorName,
   description,
   infojobsLink,
-  experienceMin,
   skillsList,
   languages,
-  studiesMin,
-  minRequirements,
-  desiredRequirements,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [wayToUploadResume, setWayToUploadResume] = useState<
     null | 'pdf' | 'text'
   >(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState({
+    recommendation: false,
+    suggestedQuestions: false,
+  });
+
   const [recommendations, setRecommendations] = useState<string[]>([]);
   const {
     handleSubmit,
@@ -60,7 +57,7 @@ export const ApplicationTemplate: React.FC<Props> = ({
   const onSubmit: SubmitHandler<InfoHackForm> = async (data) => {
     setRecommendations([]);
     clearErrors();
-    setIsLoading(true);
+    setIsLoading((prev) => ({ ...prev, recommendation: true }));
     let cvContent;
     if (wayToUploadResume === 'pdf' && selectedFile) {
       try {
@@ -86,11 +83,12 @@ export const ApplicationTemplate: React.FC<Props> = ({
         message: (error as Error)?.message || 'Server error',
       });
     } finally {
-      setIsLoading(false);
+      setIsLoading((prev) => ({ ...prev, recommendation: false }));
     }
   };
 
   const toggleUploadResume = (way: 'text' | 'pdf') => {
+    setValue('fileInput', undefined);
     reset();
     setWayToUploadResume(way);
   };
@@ -108,6 +106,8 @@ export const ApplicationTemplate: React.FC<Props> = ({
         });
       }
       setValue('fileInput', selectedFile);
+      // Reset the value of the file input
+      event.target.value = '';
     }
   };
 
@@ -146,7 +146,9 @@ export const ApplicationTemplate: React.FC<Props> = ({
                 onChange={handleFileChange}
               />
               <button
-                disabled={isLoading}
+                disabled={
+                  isLoading.recommendation || isLoading.suggestedQuestions
+                }
                 className={primaryButtonStyle}
                 onClick={() => {
                   toggleUploadResume('pdf');
@@ -158,7 +160,9 @@ export const ApplicationTemplate: React.FC<Props> = ({
                 Cargar hoja de vida en PDF
               </button>
               <button
-                disabled={isLoading}
+                disabled={
+                  isLoading.recommendation || isLoading.suggestedQuestions
+                }
                 className={primaryButtonStyle}
                 onClick={() => toggleUploadResume('text')}
               >
@@ -197,10 +201,18 @@ export const ApplicationTemplate: React.FC<Props> = ({
             <div className="my-4 flex justify-center items-center">
               <button
                 type="submit"
-                disabled={isLoading}
+                disabled={
+                  isLoading.recommendation || isLoading.suggestedQuestions
+                }
                 className={primaryButtonInvertedStyle + ' min-w-[300px]'}
               >
-                <span>{isLoading ? <Spinner /> : 'Procesar Información'}</span>
+                <span>
+                  {isLoading.recommendation ? (
+                    <Spinner />
+                  ) : (
+                    'Procesar Información'
+                  )}
+                </span>
               </button>
             </div>
           </form>
@@ -223,10 +235,18 @@ export const ApplicationTemplate: React.FC<Props> = ({
             <div className="my-4 flex justify-center items-center">
               <button
                 type="submit"
-                disabled={isLoading}
+                disabled={
+                  isLoading.recommendation || isLoading.suggestedQuestions
+                }
                 className={primaryButtonInvertedStyle + ' min-w-[300px]'}
               >
-                <span>{isLoading ? <Spinner /> : 'Procesar Información'}</span>
+                <span>
+                  {isLoading.recommendation ? (
+                    <Spinner />
+                  ) : (
+                    'Procesar Información'
+                  )}
+                </span>
               </button>
             </div>
           </form>
